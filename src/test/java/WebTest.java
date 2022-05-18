@@ -10,10 +10,9 @@ public class WebTest {
     String url = "http://www.99-bottles-of-beer.net/";
 
     @Test
-    private void testConfirmHeader(){
+    public void testConfirmHeader(){
 
         System.setProperty("webdriver.chrome.driver", "//Applications/chromedriver");
-
         WebDriver driver = new ChromeDriver();
         driver.get(url);
 
@@ -21,17 +20,44 @@ public class WebTest {
 
         Assert.assertEquals(header.getText(), "99 Bottles of Beer");
 
+    }
+
+    @Test
+    public void testLanguageButton(){
+
+        System.setProperty("webdriver.chrome.driver", "//Applications/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.get(url);
+
+        WebElement languageButton = driver.findElement(By.cssSelector(" #menu > li:nth-child(6) > a"));
+
+        Assert.assertEquals(languageButton.getText(), "Submit new Language".toUpperCase());
+    }
+
+    @Test
+    public void testClickMenuButton(){
+
+        System.setProperty("webdriver.chrome.driver", "//Applications/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.get(url);
+
+        driver.findElement(By.cssSelector(" #menu > li:nth-child(6) > a")).click();
+        WebElement header2 = driver.findElement(By.cssSelector("#main > h2"));
+
+        Assert.assertEquals(header2.getText(), "Submit New Language");
+    }
+
+    @Test
+    public void test(){
+        System.setProperty("webdriver.chrome.driver", "//Applications/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://www.99-bottles-of-beer.net/abc.html");
+
+
+        Assert.assertEquals(driver.findElement(By.cssSelector("#submenu > li:nth-child(1) > a")).getText(), "0-9");
+
         driver.quit();
     }
 }
-
-//TC_11_01 Подтвердите, что на странице по базовой ссылке в правом верхнем углу пользователь видит заголовок
-// 99 Bottles of Beer
-//
-//Шаги:
-//1. Открыть вебсайт на базовой странице
-//2. Считать заголовок в правом верхнем углу
-//3. Подтвердить, что текст заголовка соответствует ожидаемому
-//4. Закрыть браузер
 
 
