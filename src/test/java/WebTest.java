@@ -4,10 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.jar.JarOutputStream;
 
 public class WebTest {
 
@@ -153,20 +151,50 @@ public class WebTest {
     }
 
     @Test //14
-    public void test(){
+    public void testBrowseLanguages() {
+        System.setProperty("webdriver.chrome.driver", "//Applications/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.get(url);
 
-    }
+        driver.findElement(By.linkText("BROWSE LANGUAGES")).click();
+        WebElement tableHeader = driver.findElement(By.cssSelector("#category > tbody > tr:nth-child(1)"));
+
+        Assert.assertEquals(tableHeader.getText().split(" ")[0], "Language");
+        Assert.assertEquals(tableHeader.getText().split(" ")[1], "Author");
+
+        driver.quit();
 }
-//TC_11_14 Подтвердите, что нажав на пункт меню Browse Languages, пользователь увидит таблицу со следующими названиями для первого и второго столбцов:
-//Language
-//Author
-//
-//Шаги:
-//1. Открыть вебсайт на базовой странице
-//2. Нажать на пункт меню Browse Languages
-//3. Считать названия первого и второго столбцов таблицы
-//3. Подтвердить, что названия соответствует ожидаемым
-//4. Закрыть браузер
+
+@Test //15
+    public void testConfirmNoComments(){
+    System.setProperty("webdriver.chrome.driver", "//Applications/chromedriver");
+    WebDriver driver = new ChromeDriver();
+    driver.get(url);
+
+    driver.findElement(By.linkText("TOP LISTS")).click();
+    driver.findElement(By.linkText("New Comments")).click();
+    Object [] list = driver.findElements((By.xpath("/html/body/div/div[3]/text()/outerText"))).toArray();
+
+    Assert.assertEquals(list.length, 0);
+    driver.quit();
+}
+
+@Test //21
+    public void testImportantWordLayout(){
+    System.setProperty("webdriver.chrome.driver", "//Applications/chromedriver");
+    WebDriver driver = new ChromeDriver();
+    driver.get("http://www.99-bottles-of-beer.net/submitnewlanguage.html");
+
+    WebElement importantWord = driver.findElement(By.cssSelector("#main > ul > li:nth-child(1) > span"));
+
+    Assert.assertTrue(importantWord.getCssValue("color").contains("255, 255, 255") &&
+            importantWord.getCssValue("background-color").contains(("255, 0, 0")) &&
+            importantWord.getText().equals(importantWord.getText().toUpperCase()));
+
+    driver.quit();
+}
+}
+
 
 
 
