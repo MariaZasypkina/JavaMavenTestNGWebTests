@@ -187,6 +187,8 @@ public class WebTest {
 
     WebElement importantWord = driver.findElement(By.cssSelector("#main > ul > li:nth-child(1) > span"));
 
+    System.out.println(importantWord.getCssValue("font-weight"));
+
     Assert.assertTrue(importantWord.getCssValue("color").contains("255, 255, 255") &&
             importantWord.getCssValue("background-color").contains(("255, 0, 0")) &&
             importantWord.getText().equals(importantWord.getText().toUpperCase()));
@@ -194,6 +196,7 @@ public class WebTest {
     driver.quit();
 }
 }
+
 
 
 
