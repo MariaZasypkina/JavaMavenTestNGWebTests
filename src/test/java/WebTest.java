@@ -99,7 +99,7 @@ public class WebTest {
         Assert.assertTrue(langTable);
     }
 
-    @Test
+//    @Test
 }
 //TC_11_11 Подтвердите, что если на странице по ссылке http://www.99-bottles-of-beer.net/submitnewlanguage.html ,  пользователь нажмет кнопку Submit Language,  не заполнив информацию в обязательных полях, будет показана ошибка
 //
