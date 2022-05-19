@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.Arrays;
+import java.util.jar.JarOutputStream;
 
 public class WebTest {
 
@@ -164,19 +165,37 @@ public class WebTest {
         driver.quit();
 }
 
-@Test
-    public void test() throws InterruptedException {
+@Test //15
+    public void testConfirmNoComments(){
     System.setProperty("webdriver.chrome.driver", "//Applications/chromedriver");
     WebDriver driver = new ChromeDriver();
     driver.get(url);
 
     driver.findElement(By.linkText("TOP LISTS")).click();
+    driver.findElement(By.linkText("New Comments")).click();
+    Object [] list = driver.findElements((By.xpath("/html/body/div/div[3]/text()/outerText"))).toArray();
+
+    Assert.assertEquals(list.length, 0);
+    driver.quit();
+}
+
+@Test //21
+    public void testImportantWordLayout(){
+    System.setProperty("webdriver.chrome.driver", "//Applications/chromedriver");
+    WebDriver driver = new ChromeDriver();
+    driver.get("http://www.99-bottles-of-beer.net/submitnewlanguage.html");
+
+    WebElement importantWord = driver.findElement(By.cssSelector("#main > ul > li:nth-child(1) > span"));
+
+    Assert.assertTrue(importantWord.getCssValue("color").contains("255, 255, 255") &&
+            importantWord.getCssValue("background-color").contains(("255, 0, 0")) &&
+            importantWord.getText().equals(importantWord.getText().toUpperCase()));
 
     driver.quit();
 }
 }
-//TC_11_15 Подтвердите, что на странице по базовой ссылке  пользователь НЕ увидит новые комментарии, если нажмет
-// на пункты меню Top List → New Comments
+
+
 
 
 
