@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="10" failures="0" name="WebTest" time="28.388" errors="0" skipped="0">
+<testsuite tests="12" failures="0" name="WebTest" time="40.204" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -65,14 +65,16 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="WebTest" name="testBrowseLanguages" time="3.444"/>
-  <testcase classname="WebTest" name="testButton09" time="3.016"/>
-  <testcase classname="WebTest" name="testClickMenuButton" time="3.03"/>
-  <testcase classname="WebTest" name="testConfirmHeader" time="2.481"/>
-  <testcase classname="WebTest" name="testConfirmText" time="2.516"/>
-  <testcase classname="WebTest" name="testErrorMassage" time="3.045"/>
-  <testcase classname="WebTest" name="testLanguageButton" time="2.321"/>
-  <testcase classname="WebTest" name="testSearchLanguagesAPlus" time="3.227"/>
-  <testcase classname="WebTest" name="testSubmitLanguageError" time="2.883"/>
-  <testcase classname="WebTest" name="testTeamContent" time="2.425"/>
+  <testcase classname="WebTest" name="testBrowseLanguages" time="8.396"/>
+  <testcase classname="WebTest" name="testButton09" time="3.201"/>
+  <testcase classname="WebTest" name="testClickMenuButton" time="2.942"/>
+  <testcase classname="WebTest" name="testConfirmHeader" time="2.815"/>
+  <testcase classname="WebTest" name="testConfirmNoComments" time="3.399"/>
+  <testcase classname="WebTest" name="testConfirmText" time="2.572"/>
+  <testcase classname="WebTest" name="testErrorMassage" time="3.219"/>
+  <testcase classname="WebTest" name="testImportantWordLayout" time="2.52"/>
+  <testcase classname="WebTest" name="testLanguageButton" time="2.418"/>
+  <testcase classname="WebTest" name="testSearchLanguagesAPlus" time="3.278"/>
+  <testcase classname="WebTest" name="testSubmitLanguageError" time="3.101"/>
+  <testcase classname="WebTest" name="testTeamContent" time="2.343"/>
 </testsuite>
