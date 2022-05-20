@@ -5,7 +5,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.Arrays;
-import java.util.jar.JarOutputStream;
 
 public class WebTest {
 
@@ -91,10 +90,10 @@ public class WebTest {
 
         driver.findElement(By.linkText("SEARCH LANGUAGES")).click();
         driver.findElement(By.name("search")).sendKeys("A+");
-        ;
+
         driver.findElement(By.name("submitsearch")).click();
 
-        Boolean langTable = driver.findElement(By.cssSelector(
+        boolean langTable = driver.findElement(By.cssSelector(
                 "#category > tbody > tr:nth-child(2)")).getText().contains("A+");
 
         Assert.assertTrue(langTable);
@@ -141,7 +140,7 @@ public class WebTest {
         WebDriver driver = new ChromeDriver();
         driver.get("http://www.99-bottles-of-beer.net/submitnewlanguage.html");
 
-        Boolean test = driver.findElement(By.cssSelector("#main > ul")).getText().contains(
+        boolean test = driver.findElement(By.cssSelector("#main > ul")).getText().contains(
         "IMPORTANT: Take your time! The more carefully you fill out this form (especially the language name and " +
         "description), the easier it will be for us and the faster your language will show up on this page. We don't " +
         "have the time to mess around with fixing your descriptions etc. Thanks for your understanding.");
@@ -187,7 +186,7 @@ public class WebTest {
 
     WebElement importantWord = driver.findElement(By.cssSelector("#main > ul > li:nth-child(1) > span"));
 
-    System.out.println(importantWord.getCssValue("font-weight"));
+//    System.out.println(importantWord.get);
 
     Assert.assertTrue(importantWord.getCssValue("color").contains("255, 255, 255") &&
             importantWord.getCssValue("background-color").contains(("255, 0, 0")) &&
