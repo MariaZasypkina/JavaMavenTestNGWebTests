@@ -17,7 +17,9 @@ public class WebTest {
         WebDriver driver = new ChromeDriver();
         driver.get(url);
 
-        WebElement header = driver.findElement(By.cssSelector("#header > h1"));
+ //       WebElement header = driver.findElement(By.cssSelector("#header > h1"));
+        WebElement header = driver.findElement(By.xpath("/html/body/div id='header'/h1"));
+//        /html/body/div/div[1]/h1
 
         Assert.assertEquals(header.getText(), "99 Bottles of Beer");
         driver.quit();
@@ -73,7 +75,6 @@ public class WebTest {
         Object team1 = driver.findElements(By.cssSelector("#main > h3")).get(0).getText();
         Object team2 = driver.findElements(By.cssSelector("#main > h3")).get(1).getText();
         Object team3 = driver.findElements(By.cssSelector("#main > h3")).get(2).getText();
-
 
         Object[] actualResult = {team1, team2, team3};
         Arrays.sort(actualResult);
