@@ -17,7 +17,7 @@ public class WebTest {
         WebDriver driver = new ChromeDriver();
         driver.get(url);
 
-        WebElement header = driver.findElement(By.cssSelector("#header > h1"));
+        WebElement header = driver.findElement(By.xpath("//body/div[@id='wrap']/div[@id='header']/h1"));
 
         Assert.assertEquals(header.getText(), "99 Bottles of Beer");
         driver.quit();
@@ -30,9 +30,10 @@ public class WebTest {
         WebDriver driver = new ChromeDriver();
         driver.get(url);
 
-        WebElement languageButton = driver.findElement(By.cssSelector(" #menu > li:nth-child(6) > a"));
+        WebElement submitNewLanguageButton = driver.findElement(By.xpath(
+        "//body/div[@id='wrap']/div[@id='navigation']/ul[@id='menu']/li/a[@href='/submitnewlanguage.html']"));
 
-        Assert.assertEquals(languageButton.getText(), "Submit new Language".toUpperCase());
+        Assert.assertEquals(submitNewLanguageButton.getText(), "Submit new Language".toUpperCase());
         driver.quit();
     }
 
@@ -73,7 +74,6 @@ public class WebTest {
         Object team1 = driver.findElements(By.cssSelector("#main > h3")).get(0).getText();
         Object team2 = driver.findElements(By.cssSelector("#main > h3")).get(1).getText();
         Object team3 = driver.findElements(By.cssSelector("#main > h3")).get(2).getText();
-
 
         Object[] actualResult = {team1, team2, team3};
         Arrays.sort(actualResult);
