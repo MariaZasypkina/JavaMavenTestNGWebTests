@@ -17,9 +17,7 @@ public class WebTest {
         WebDriver driver = new ChromeDriver();
         driver.get(url);
 
- //       WebElement header = driver.findElement(By.cssSelector("#header > h1"));
-        WebElement header = driver.findElement(By.xpath("/html/body/div id='header'/h1"));
-//        /html/body/div/div[1]/h1
+        WebElement header = driver.findElement(By.xpath("//body/div[@id='wrap']/div[@id='header']/h1"));
 
         Assert.assertEquals(header.getText(), "99 Bottles of Beer");
         driver.quit();
