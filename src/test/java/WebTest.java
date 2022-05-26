@@ -30,9 +30,10 @@ public class WebTest {
         WebDriver driver = new ChromeDriver();
         driver.get(url);
 
-        WebElement languageButton = driver.findElement(By.cssSelector(" #menu > li:nth-child(6) > a"));
+        WebElement submitNewLanguageButton = driver.findElement(By.xpath(
+        "//body/div[@id='wrap']/div[@id='navigation']/ul[@id='menu']/li/a[@href='/submitnewlanguage.html']"));
 
-        Assert.assertEquals(languageButton.getText(), "Submit new Language".toUpperCase());
+        Assert.assertEquals(submitNewLanguageButton.getText(), "Submit new Language".toUpperCase());
         driver.quit();
     }
 
