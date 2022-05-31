@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-20T10:33:36 MDT" name="WebTest" finished-at="2022-05-20T10:34:16 MDT" duration-ms="40249">
+    <groups>
+    </groups>
+    <test started-at="2022-05-20T10:33:36 MDT" name="Command line test" finished-at="2022-05-20T10:34:16 MDT" duration-ms="40249">
+      <class name="WebTest">
+        <test-method signature="testBrowseLanguages()[pri:0, instance:WebTest@636be97c]" started-at="2022-05-20T10:33:36 MDT" name="testBrowseLanguages" finished-at="2022-05-20T10:33:44 MDT" duration-ms="8393" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBrowseLanguages -->
+        <test-method signature="testButton09()[pri:0, instance:WebTest@636be97c]" started-at="2022-05-20T10:33:44 MDT" name="testButton09" finished-at="2022-05-20T10:33:47 MDT" duration-ms="3203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testButton09 -->
+        <test-method signature="testClickMenuButton()[pri:0, instance:WebTest@636be97c]" started-at="2022-05-20T10:33:47 MDT" name="testClickMenuButton" finished-at="2022-05-20T10:33:50 MDT" duration-ms="2942" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClickMenuButton -->
+        <test-method signature="testConfirmHeader()[pri:0, instance:WebTest@636be97c]" started-at="2022-05-20T10:33:50 MDT" name="testConfirmHeader" finished-at="2022-05-20T10:33:53 MDT" duration-ms="2815" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConfirmHeader -->
+        <test-method signature="testConfirmNoComments()[pri:0, instance:WebTest@636be97c]" started-at="2022-05-20T10:33:53 MDT" name="testConfirmNoComments" finished-at="2022-05-20T10:33:57 MDT" duration-ms="3399" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConfirmNoComments -->
+        <test-method signature="testConfirmText()[pri:0, instance:WebTest@636be97c]" started-at="2022-05-20T10:33:57 MDT" name="testConfirmText" finished-at="2022-05-20T10:33:59 MDT" duration-ms="2572" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConfirmText -->
+        <test-method signature="testErrorMassage()[pri:0, instance:WebTest@636be97c]" started-at="2022-05-20T10:33:59 MDT" name="testErrorMassage" finished-at="2022-05-20T10:34:02 MDT" duration-ms="3219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testErrorMassage -->
+        <test-method signature="testImportantWordLayout()[pri:0, instance:WebTest@636be97c]" started-at="2022-05-20T10:34:02 MDT" name="testImportantWordLayout" finished-at="2022-05-20T10:34:05 MDT" duration-ms="2520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testImportantWordLayout -->
+        <test-method signature="testLanguageButton()[pri:0, instance:WebTest@636be97c]" started-at="2022-05-20T10:34:05 MDT" name="testLanguageButton" finished-at="2022-05-20T10:34:07 MDT" duration-ms="2418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLanguageButton -->
+        <test-method signature="testSearchLanguagesAPlus()[pri:0, instance:WebTest@636be97c]" started-at="2022-05-20T10:34:07 MDT" name="testSearchLanguagesAPlus" finished-at="2022-05-20T10:34:11 MDT" duration-ms="3278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchLanguagesAPlus -->
+        <test-method signature="testSubmitLanguageError()[pri:0, instance:WebTest@636be97c]" started-at="2022-05-20T10:34:11 MDT" name="testSubmitLanguageError" finished-at="2022-05-20T10:34:14 MDT" duration-ms="3100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSubmitLanguageError -->
+        <test-method signature="testTeamContent()[pri:0, instance:WebTest@636be97c]" started-at="2022-05-20T10:34:14 MDT" name="testTeamContent" finished-at="2022-05-20T10:34:16 MDT" duration-ms="2343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTeamContent -->
+      </class> <!-- WebTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- WebTest -->
+</testng-results>
